@@ -1,0 +1,6 @@
+# # IDEs
+*.swp
+*.swo
+*.vscode/
+*.DS_Store
+.clangd/
