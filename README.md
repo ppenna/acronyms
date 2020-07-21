@@ -14,7 +14,7 @@ How to Use this Library
 ------------------------
 
 
-#### 1. Add this Library to Your Project
+#### 1. Add This Library to Your Project
 
 ```
 cd path/to/your/project
@@ -34,7 +34,7 @@ git submodule add https://github.com/ppenna/acronyms.git
 
 ```
 
-#### 2. Update Your Library Once in a While
+#### 3. Update This Library Once in a While
 
 ```
 cd /path/to/your/project
