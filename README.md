@@ -8,7 +8,8 @@ The following libraries are featured:
 - [x] Computer Architecture
 - [x] High Performance Computing
 - [x] Miscellaneous
-- [x] Operating System
+- [x] Operating Systems
+- [x] Runtime Systems
 
 How to Use this Library
 ------------------------
