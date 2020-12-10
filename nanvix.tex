@@ -80,12 +80,20 @@
 \newacronym{vmstub}{VMem Stub}{Virtual Memory Stub}
 \newcommand{\vmstub}{\gls{vmstub}\xspace}
 
+\newcommand{\pgallocator}{Page Allocator\xspace}
+\newcommand{\physallocator}{Physical Memory Allocator\xspace}
+\newcommand{\upgpool}{User Page Pool\xspace}
+\newcommand{\kpgpool}{Kernel Page Pool\xspace}
+
 %-----------------------------------------------------------------------------
 % Process
 %-----------------------------------------------------------------------------
 
+% Thread System
+\newcommand{\ts}{\textit{Thread System Module}\xspace}
+
 % PMS
-\newacronym{pms}{PMS}{Process Management System}
+\newacronym{pms}{PMS}{Process Management Subsystem}
 	\newcommand{\pms}{\gls{pms}\xspace}
 
 %=============================================================================
@@ -100,7 +108,6 @@
 \newcommand{\heartbeat}{\normalfont{\texttt{heartbeat}}\xspace}
 \newcommand{\bsync}{\normalfont{\texttt{bsync}}\xspace}
 \newcommand{\deploy}{\normalfont{\texttt{deploy}}\xspace}
-\newcommand{\spawn}{\normalfont{\texttt{spawn}}\xspace}
 \newcommand{\lookup}{\normalfont{\texttt{lookup}}\xspace}
 \newcommand{\buffer}{\normalfont{\texttt{buffer}}\xspace}
 \newcommand{\stream}{\normalfont{\texttt{stream}}\xspace}
@@ -118,9 +125,90 @@
 % API
 %=============================================================================
 
-\newcommand{\ftruncate}{\normalfont{\texttt{ftruncate()}}\xspace}
-\newcommand{\malloc}{\normalfont{\texttt{malloc()}}\xspace}
-\newcommand{\mmap}{\normalfont{\texttt{mmap()}}\xspace}
-\newcommand{\shmopen}{\normalfont{\texttt{shm\_open()}}\xspace}
-\newcommand{\excppause}{\normalfont{\texttt{excp\_pause()}}\xspace}
-\newcommand{\excpresume}{\normalfont{\texttt{excp\_resume()}}\xspace}
+\newcommand{\ftruncate}{\normalfont{\texttt{ftruncate}}\xspace}
+\newcommand{\malloc}{\normalfont{\texttt{malloc}}\xspace}
+\newcommand{\mmap}{\normalfont{\texttt{mmap}}\xspace}
+\newcommand{\shmopen}{\normalfont{\texttt{shm\_open}}\xspace}
+
+%-----------------------------------------------------------------------------
+% Kernel Calls
+%-----------------------------------------------------------------------------
+
+\newcommand{\exit}{\normalfont{\texttt{\_exit}}\xspace}
+
+% Thread System
+\newcommand{\threadgetid}{\normalfont{\texttt{thread\_get\_id}}\xspace}
+\newcommand{\threadcreate}{\normalfont{\texttt{thread\_create}}\xspace}
+\newcommand{\threadexit}{\normalfont{\texttt{thread\_exit}}\xspace}
+\newcommand{\threadjoin}{\normalfont{\texttt{thread\_join}}\xspace}
+\newcommand{\threadyield}{\normalfont{\texttt{thread\_yield}}\xspace}
+\newcommand{\condwait}{\normalfont{\texttt{cond\_wait}}\xspace}
+\newcommand{\condsignal}{\normalfont{\texttt{cond\_signal}}\xspace}
+\newcommand{\condinit}{\normalfont{\texttt{cond\_init}}\xspace}
+\newcommand{\spinlockinit}{\normalfont{\texttt{spinlock\_init}}\xspace}
+\newcommand{\spinlocklock}{\normalfont{\texttt{spinlock\_lock}}\xspace}
+\newcommand{\spinlockunlock}{\normalfont{\texttt{spinlock\_unlock}}\xspace}
+\newcommand{\sleep}{\normalfont{\texttt{sleep}}\xspace}
+\newcommand{\wakeup}{\normalfont{\texttt{wakeup}}\xspace}
+\newcommand{\shutdown}{\normalfont{\texttt{shutdown}}\xspace}
+\newcommand{\sigctl}{\normalfont{\texttt{sigctl}}\xspace}
+\newcommand{\sigsend}{\normalfont{\texttt{sigsend}}\xspace}
+\newcommand{\sigwait}{\normalfont{\texttt{sigwait}}\xspace}
+\newcommand{\sigreturn}{\normalfont{\texttt{sigreturn}}\xspace}
+\newcommand{\excpctrl}{\normalfont{\texttt{excp\_ctrl}}\xspace}
+\newcommand{\excppause}{\normalfont{\texttt{excp\_pause}}\xspace}
+\newcommand{\excpresume}{\normalfont{\texttt{excp\_resume}}\xspace}
+
+% IKC Facility
+\newcommand{\synccreate}{\normalfont{\texttt{sync\_create}}\xspace}
+\newcommand{\syncopen}{\normalfont{\texttt{sync\_open}}\xspace}
+\newcommand{\syncunlink}{\normalfont{\texttt{sync\_unlink}}\xspace}
+\newcommand{\syncclose}{\normalfont{\texttt{sync\_close}}\xspace}
+\newcommand{\syncwait}{\normalfont{\texttt{sync\_wait}}\xspace}
+\newcommand{\syncsignal}{\normalfont{\texttt{sync\_signal}}\xspace}
+\newcommand{\syncioctl}{\normalfont{\texttt{sync\_ioctl}}\xspace}
+\newcommand{\mailboxcreate}{\normalfont{\texttt{mailbox\_create}}\xspace}
+\newcommand{\mailboxopen}{\normalfont{\texttt{mailbox\_open}}\xspace}
+\newcommand{\mailboxunlink}{\normalfont{\texttt{mailbox\_unlink}}\xspace}
+\newcommand{\mailboxclose}{\normalfont{\texttt{mailbox\_close}}\xspace}
+\newcommand{\mailboxawrite}{\normalfont{\texttt{mailbox\_awrite}}\xspace}
+\newcommand{\mailboxaread}{\normalfont{\texttt{mailbox\_aread}}\xspace}
+\newcommand{\mailboxwait}{\normalfont{\texttt{mailbox\_wait}}\xspace}
+\newcommand{\mailboxioctl}{\normalfont{\texttt{mailbox\_ioctl}}\xspace}
+\newcommand{\portalcreate}{\normalfont{\texttt{portal\_create}}\xspace}
+\newcommand{\portalallow}{\normalfont{\texttt{portal\_allow}}\xspace}
+\newcommand{\portalopen}{\normalfont{\texttt{portal\_open}}\xspace}
+\newcommand{\portalunlink}{\normalfont{\texttt{portal\_unlink}}\xspace}
+\newcommand{\portalclose}{\normalfont{\texttt{portal\_close}}\xspace}
+\newcommand{\portalawrite}{\normalfont{\texttt{portal\_awrite}}\xspace}
+\newcommand{\portalaread}{\normalfont{\texttt{portal\_aread}}\xspace}
+\newcommand{\portalwait}{\normalfont{\texttt{portal\_wait}}\xspace}
+\newcommand{\portalioctl}{\normalfont{\texttt{portal\_ioctl}}\xspace}
+\newcommand{\commgetport}{\normalfont{\texttt{comm\_get\_port}}\xspace}
+\newcommand{\clustergetnum}{\normalfont{\texttt{cluster\_get\_num}}\xspace}
+
+
+% Memory System
+\newcommand{\framealloc}{\normalfont{\texttt{frame\_alloc}}\xspace}
+\newcommand{\framefree}{\normalfont{\texttt{frame\_free}}\xspace}
+\newcommand{\upagealloc}{\normalfont{\texttt{upage\_alloc}}\xspace}
+\newcommand{\upagefree}{\normalfont{\texttt{upage\_free}}\xspace}
+\newcommand{\upagemap}{\normalfont{\texttt{upage\_map}}\xspace}
+\newcommand{\upagelink}{\normalfont{\texttt{upage\_link}}\xspace}
+\newcommand{\upageunlink}{\normalfont{\texttt{upage\_unlink}}\xspace}
+\newcommand{\upageunmap}{\normalfont{\texttt{upage\_unmap}}\xspace}
+
+% Misc
+\newcommand{\clock}{\normalfont{\texttt{clock}}\xspace}
+\newcommand{\stats}{\normalfont{\texttt{stats}}\xspace}
+
+
+%-----------------------------------------------------------------------------
+% System Calls
+%-----------------------------------------------------------------------------
+
+% Process Management
+\newcommand{\spawn}{\normalfont{\texttt{spawn}}\xspace}
+\newcommand{\namelink}{\normalfont{\texttt{name\_link}}\xspace}
+\newcommand{\nameunlink}{\normalfont{\texttt{name\_unlink}}\xspace}
+\newcommand{\namelookup}{\normalfont{\texttt{name\_lookp}}\xspace}
