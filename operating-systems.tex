@@ -49,22 +49,57 @@
 	\newcommand{\bsp}{\gls{bsp}\xspace}
 	\newcommand{\bsps}{\glspl{bsp}\xspace}
 
+% Monolithic Kernel
+\newcommand{\monokernel}{{monolithic kernel}\xspace}
+\newcommand{\monokernels}{{monolithic kernels}\xspace}
+\newcommand{\Monokernel}{{Monolithic Kernel}\xspace}
+
+
 % Exokernel
-\newcommand{\exokernel}{\textit{exokernel}\xspace}
-\newcommand{\Exokernel}{\textit{Exokernel}\xspace}
+\newcommand{\exokernel}{{exokernel}\xspace}
+\newcommand{\exokernels}{{exokernels}\xspace}
+\newcommand{\Exokernel}{{Exokernel}\xspace}
+\newcommand{\Exokernels}{{Exokernels}\xspace}
 
 % Hypervisor
-\newcommand{\hypervisor}{\textit{hypervisor}\xspace}
+\newcommand{\hypervisor}{{hypervisor}\xspace}
 
 % Microkernel
-\newcommand{\microkernel}{\textit{microkernel}\xspace}
+\newcommand{\microkernel}{{microkernel}\xspace}
+\newcommand{\microkernels}{{microkernels}\xspace}
+\newcommand{\Microkernel}{{Microkernel}\xspace}
+\newcommand{\Microkernels}{{Microkernels}\xspace}
 
 % Multikernel
-\newcommand{\multikernel}{\textit{multikernel}\xspace}
+\newcommand{\multikernel}{{multikernel}\xspace}
+\newcommand{\multikernels}{{multikernels}\xspace}
+\newcommand{\Multikernel}{{Multikernel}\xspace}
+\newcommand{\Multikernels}{{Multikernels}\xspace}
 
 % Nanokernel
-\newcommand{\nanokernel}{\textit{nanokernel}\xspace}
-\newcommand{\Nanokernel}{\textit{Nanokernel}\xspace}
+\newcommand{\nanokernel}{{nanokernel}\xspace}
+\newcommand{\Nanokernel}{{Nanokernel}\xspace}
+
+%-----------------------------------------------------------------------------
+% Subsystems
+%-----------------------------------------------------------------------------
+
+% File System
+\newacronym{fs}{FS}{File System}
+	\newcommand{\fs}{\gls{fs}\xspace}
+
+% Memory Management Subsystem
+\newacronym{mms}{MMS}{Memory Management Subystem}
+	\newcommand{\mms}{\gls{mms}\xspace}
+
+% Process Management Subsystem
+\newacronym{pms}{PMS}{Process Management Subsystem}
+	\newcommand{\pms}{\gls{pms}\xspace}
+
+% File Management System
+\newacronym{fms}{FMS}{File Management Subsystem}
+	\newcommand{\fms}{\gls{fms}\xspace}
+
 
 %=============================================================================
 % Misc
@@ -75,21 +110,33 @@
 	\newcommand{\api}{\gls{api}\xspace}
 	\newcommand{\apis}{\glspl{api}\xspace}
 
+% GID
+\newacronym{gid}{GID}{Group Identifier}
+	\newcommand{\gid}{\gls{gid}\xspace}
+
 % OSes
 \newacronym[plural=OSes,firstplural=Operating Systems (OSes)]{os}{OS}{Operating System}
 	\newcommand{\os}{\gls{os}\xspace}
 	\newcommand{\oses}{\glspl{os}\xspace}
 
+% PID
+\newacronym{pid}{PID}{Process Identifier}
+	\newcommand{\pid}{\gls{pid}\xspace}
+
 % SSI
 \newacronym{ssi}{SSI}{Single System Image}
 	\newcommand{\ssi}{\gls{ssi}\xspace}
+
+% UID
+\newacronym{uid}{UID}{User Identifier}
+	\newcommand{\uid}{\gls{uid}\xspace}
 
 % POSIX
 \newacronym{posix}{POSIX}{Portable Operating System Interface}
 	\newcommand{\posix}{\gls{posix}\xspace}
 
 %=============================================================================
-% Policies
+% Page Replacement Policies
 %=============================================================================
 
 % Aging
@@ -99,13 +146,66 @@
 \newacronym{fifo}{FIFO}{First-in First-Out}
 	\newcommand{\fifo}{\gls{fifo}\xspace}
 
+% LRU
+\newacronym{lru}{LRU}{Least Recently Used}
+	\newcommand{\lru}{\gls{lru}\xspace}
+
 % NFU
 \newacronym{nfu}{NFU}{Not Frequently Used}
 	\newcommand{\nfu}{\gls{nfu}\xspace}
 
+% NRU
+\newacronym{nru}{NRU}{Not Recently Used}
+	\newcommand{\nru}{\gls{nru}\xspace}
+	\newcommand{\wsset}{\gls{wset}\xspace}
+
+% Second Chance
+\newcommand{\secondChance}{Second Chance\xspace}
+
 % WSClock
 \newacronym{wsclock}{WSClock}{Working Set Clock}
 	\newcommand{\wsclock}{\gls{wsclock}\xspace}
+
+% WSet
+\newacronym{wset}{WSet}{Working Set}
+	\newcommand{\wset}{\gls{wset}\xspace}
+
+%=============================================================================
+% Process Scheduling
+%=============================================================================
+
+% First-Come, First-Served
+\newacronym{fcfs}{FCFS}{First-Come, First Served}
+	\newcommand{\fcfs}{\gls{fcfs}\xspace}
+
+% Shortest Job First
+\newacronym{sjf}{SJF}{Shortest Job First}
+	\newcommand{\sjf}{\gls{sjf}\xspace}
+
+% Earliest Deadline First
+\newacronym{edf}{EDF}{Earliest Deadline First}
+	\newcommand{\edf}{\gls{edf}\xspace}
+
+% Round-Robin
+\newacronym{rr}{RR}{Round-Robin}
+	\newcommand{\rr}{\gls{rr}\xspace}
+
+%=============================================================================
+% File Systems
+%=============================================================================
+
+% I-Node
+\newacronym{inode}{I-Node}{Index-Node}
+	\newcommand{\inode}{\gls{inode}\xspace}
+	\newcommand{\inodes}{\glspl{inode}\xspace}
+
+% FAT
+\newacronym{fat}{fat}{File Allocation Table}
+	\newcommand{\fat}{\gls{fat}\xspace}
+
+% MBR
+\newacronym{mbr}{mbr}{master Boot Record}
+	\newcommand{\mbr}{\gls{mbr}\xspace}
 
 %=============================================================================
 % Systems
@@ -116,6 +216,9 @@
 
 % BSD
 \newcommand{\bsd}{BSD\xspace}
+
+% Corey
+\newcommand{\corey}{Corey\xspace}
 
 % Fleets
 \newcommand{\fleets}{Fleets\xspace}
@@ -133,6 +236,9 @@
 \newacronym{lfour}{L4}{L4 Microkernel}
 	\newcommand{\lfour}{\gls{lfour}\xspace}
 
+% K42
+\newcommand{\kfortytwo}{K42\xspace}
+
 % M3
 \newcommand{\mthree}{M\textsuperscript{3}\xspace}
 
@@ -145,5 +251,29 @@
 % RTEMS
 \newcommand{\rtems}{RTEMS\xspace}
 
+% Tornado
+\newcommand{\tornado}{Tornado\xspace}
+
 % Unix
 \newcommand{\unix}{Unix\xspace}
+
+% Windows
+\newcommand{\windows}{Windows\xspace}
+
+%=============================================================================
+% System Calls
+%=============================================================================
+
+\newcommand{\lock}{\normalfont{\texttt{lock}}\xspace}
+\newcommand{\unlock}{\normalfont{\texttt{unlock}}\xspace}
+\newcommand{\down}{\normalfont{\texttt{down}}\xspace}
+\newcommand{\up}{\normalfont{\texttt{up}}\xspace}
+
+\newcommand{\create}{\normalfont{\texttt{create}}\xspace}
+\newcommand{\remove}{\normalfont{\texttt{remove}}\xspace}
+\newcommand{\open}{\normalfont{\texttt{open}}\xspace}
+\newcommand{\close}{\normalfont{\texttt{close}}\xspace}
+\newcommand{\seek}{\normalfont{\texttt{seek}}\xspace}
+\newcommand{\rename}{\normalfont{\texttt{rename}}\xspace}
+\newcommand{\chattr}{\normalfont{\texttt{chattr}}\xspace}
+\newcommand{\lsattr}{\normalfont{\texttt{lsattr}}\xspace}
