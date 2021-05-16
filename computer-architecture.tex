@@ -34,10 +34,9 @@
 	\newcommand{\rmans}{\glspl{rm}\xspace}
 
 % LWs
-\newcommand{\lw}{lightweight manycore\xspace}
-\newcommand{\Lw}{Lightweight manycore\xspace}
-\newcommand{\lws}{lightweight manycores\xspace}
-\newcommand{\Lws}{Lightweight manycores\xspace}
+\newacronym{lw}{LW Manycore}{Lightweight Manycore}
+	\newcommand{\lw}{\gls{lw}\xspace}
+	\newcommand{\lws}{\glspl{lw}\xspace}
 
 % MMU
 \newacronym{mmu}{MMU}{Memory Management Unit}
@@ -49,6 +48,7 @@
 % MPB
 \newacronym{mpb}{MPB}{Message Passing Buffer}
 	\newcommand{\mpb}{\gls{mpb}\xspace}
+	\newcommand{\mpbs}{\glspl{mpb}\xspace}
 
 % NoC
 \newacronym[longplural={Networks-on-Chip}]{noc}{NoC}{Network-on-Chip}
@@ -87,6 +87,15 @@
 	\newcommand{\ltlb}{\gls{ltlb}\xspace}
 	\newcommand{\ltlbs}{\glspl{ltlb}\xspace}
 
+\newacronym{ipi}{IPI}{Inter Processor Interrupt}
+	\newcommand{\ipi}{\gls{ipi}\xspace}
+	\newcommand{\ipis}{\glspl{ipi}\xspace}
+
+\newacronym{dtu}{DTU}{Data Transfer Unit}
+	\newcommand{\dtu}{\gls{dtu}\xspace}
+	\newcommand{\dtus}{\glspl{dtu}\xspace}
+
+
 %=============================================================================
 % Instruction Set Architectures
 %=============================================================================
@@ -122,6 +131,9 @@
 
 % x86
 \newcommand{\intel}{x86\xspace}
+
+% x86_64
+\newcommand{\amd}{x86\_64\xspace}
 
 % ARMv8
 \newcommand{\arm}{ARMv8\xspace}
